@@ -1,11 +1,12 @@
 package converter
 
+import java.util.*
 import kotlin.math.pow
 
+val scanner = Scanner(System.`in`)
 fun main() {
     // write your code here
-    val decimal = 4
-    print("$decimal = ${binary(decimal)}")
+    print(baseEight(scanner.nextInt()))
 }
 
 fun binary(num: Int): String {
@@ -24,9 +25,13 @@ fun binary(num: Int): String {
         if (remainder >= divider) {
             binary += "1"
             remainder -= divider
-        }else{
+        } else {
             binary += 0
         }
     }
     return binary
+}
+
+fun baseEight(num: Int): Int {
+    return num % 8
 }
