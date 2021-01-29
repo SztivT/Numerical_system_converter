@@ -9,10 +9,17 @@ fun main() {
 }
 
 fun safeDivision(divident: Int, divisor: Int): Int {
+    val quotient: Int
     try {
-        return divident / divisor
+        if (divisor == 0) {
+            throw Exception("Division by Zero is impossible")
+        }
     }
-    catch (ae: ArithmeticException) {
-        println(ae)
+    catch (e: Exception) {
+        println(e)
     }
+    finally {
+        quotient = divident / divisor
+    }
+    return quotient
 }

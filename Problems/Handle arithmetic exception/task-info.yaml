@@ -8,8 +8,12 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/learn/step/7605#comment
-status: Solved
+status: Failed
 feedback:
-  message: <html>Correct solution</html>
-  time: Sun, 24 Jan 2021 18:00:45 UTC
+  message: |
+    Compilation error
+    main.kt:18:1: error: a 'return' expression required in a function with a block body ('{...}')
+    }
+    ^
+  time: Sun, 24 Jan 2021 18:03:09 UTC
 record: -1
